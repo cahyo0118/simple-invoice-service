@@ -62,7 +62,7 @@ public class QueryHelpers {
 
         return new QueryListResult<Class<?>>(
                 objectMapper.convertValue(db.select(query), List.class),
-                Integer.parseInt(String.valueOf(db.row(queryCount).get("count")))
+                (db.row(queryCount).get("count") == null) ? 0 : Integer.parseInt(String.valueOf(db.row(queryCount).get("count")))
         );
     }
 
