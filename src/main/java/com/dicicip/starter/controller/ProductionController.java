@@ -1,6 +1,5 @@
 package com.dicicip.starter.controller;
 
-import com.dicicip.starter.model.Payment;
 import com.dicicip.starter.model.Production;
 import com.dicicip.starter.repository.ProductionRepository;
 import com.dicicip.starter.util.APIResponse;
